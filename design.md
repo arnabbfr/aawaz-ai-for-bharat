@@ -2,11 +2,11 @@
 
 ## Overview
 
-Sahayak 2.0 is a voice-first civic assistance platform that combines Automatic Speech Recognition (ASR), Retrieval-Augmented Generation (RAG), and Text-to-Speech (TTS) to provide accessible government scheme information to rural citizens in Assam, India. The system architecture follows a modular pipeline design where user voice input flows through language processing, semantic search, LLM reasoning, and voice output generation.
+I am Sahayak 2.0, a voice-first civic assistance platform that combines Automatic Speech Recognition (ASR), Retrieval-Augmented Generation (RAG), and Text-to-Speech (TTS) to provide accessible government scheme information to rural citizens in Assam, India. My architecture follows a modular pipeline design where user voice input flows through language processing, semantic search, LLM reasoning, and voice output generation.
 
-The core innovation lies in the RAG pipeline that grounds LLM responses in verified government documents, preventing hallucination while enabling natural language interaction in local languages. The system supports two primary interaction modes: voice-to-voice conversation for queries and image-based document simplification (Snap & Explain) for physical documents.
+My core innovation lies in the RAG pipeline that grounds LLM responses in verified government documents, preventing hallucination while enabling natural language interaction in local languages. I support two primary interaction modes: voice-to-voice conversation for queries and image-based document simplification (Snap & Explain) for physical documents.
 
-Key design principles:
+My key design principles:
 - **Voice-First**: Optimized for spoken interaction with minimal UI complexity
 - **Language-Inclusive**: Native support for Assamese, Bodo, and Hindi
 - **Accuracy-Grounded**: All responses backed by retrieved government documents
@@ -17,7 +17,7 @@ Key design principles:
 
 ### System Architecture Overview
 
-The Sahayak system follows a three-layer architecture:
+I follow a three-layer architecture:
 
 **1. Frontend Layer (User Interface)**
 - WhatsApp Business API integration for voice messages
@@ -25,7 +25,7 @@ The Sahayak system follows a three-layer architecture:
 - Web interface (React-based) for browser access
 - Handles audio capture, upload, and playback
 
-**2. AI Processing Layer (Core Intelligence)**
+**2. AI Processing Layer (My Core Intelligence)**
 - ASR Service: Converts voice to text (Bhashini API or Whisper)
 - Language Detection: Identifies input language
 - Embedding Service: Generates query embeddings
@@ -35,7 +35,7 @@ The Sahayak system follows a three-layer architecture:
 - TTS Service: Converts text response to speech
 - OCR Service: Extracts text from document images
 
-**3. Data Layer (Knowledge Management)**
+**3. Data Layer (My Knowledge Management)**
 - Vector Database: Stores document embeddings (Pinecone or Milvus)
 - Document Store: Raw government scheme PDFs and metadata
 - Cache Layer: Frequently accessed responses and embeddings
@@ -186,7 +186,7 @@ Output:
 
 **Prompt Template**:
 ```
-You are Sahayak, a helpful civic assistant for rural India. Answer the user's question based ONLY on the provided context. If the context doesn't contain the answer, say so clearly.
+I am Sahayak, a helpful civic assistant for rural India. I answer user questions based ONLY on the provided context. If the context doesn't contain the answer, I say so clearly.
 
 Context:
 {retrieved_context}
@@ -462,7 +462,7 @@ For complex documents with tables and forms, use vision-capable LLM:
 
 **Prompt Template for Document Analysis**:
 ```
-You are analyzing a government document image for a rural citizen with low literacy. 
+I am analyzing a government document image for a rural citizen with low literacy. 
 
 Task:
 1. Identify what type of document this is
@@ -767,27 +767,27 @@ After analyzing all acceptance criteria, I identified several opportunities to c
 ### Core Functional Properties
 
 **Property 1: Language Consistency**
-*For any* query in a supported language (Assamese, Bodo, Hindi, or English), the system response SHALL be generated in the same language as the query.
+*For any* query in a supported language (Assamese, Bodo, Hindi, or English), I SHALL generate my response in the same language as the query.
 **Validates: Requirements 4.1, 4.2, 4.3, 4.4**
 
 **Property 2: Audio Format Compatibility**
-*For any* valid audio input in WAV, MP3, or OGG format, the ASR_Service SHALL successfully accept and process the audio.
+*For any* valid audio input in WAV, MP3, or OGG format, I SHALL successfully accept and process the audio.
 **Validates: Requirements 1.5**
 
 **Property 3: Automatic Language Detection**
-*For any* audio input in a supported language, the ASR_Service SHALL correctly detect the language without explicit language specification.
+*For any* audio input in a supported language, I SHALL correctly detect the language without explicit language specification.
 **Validates: Requirements 1.2**
 
 **Property 4: RAG Pipeline Execution**
-*For any* user query, the RAG_Pipeline SHALL generate an embedding and execute a vector database search.
+*For any* user query, I SHALL generate an embedding and execute a vector database search.
 **Validates: Requirements 2.1**
 
 **Property 5: Top-K Retrieval**
-*For any* query with matching results, the RAG_Pipeline SHALL retrieve at most 5 document chunks, ordered by descending similarity score.
+*For any* query with matching results, I SHALL retrieve at most 5 document chunks, ordered by descending similarity score.
 **Validates: Requirements 2.2, 2.4**
 
 **Property 6: No-Results Handling**
-*For any* query where all similarity scores are below 0.7, the system SHALL return a message indicating that information is not available.
+*For any* query where all similarity scores are below 0.7, I SHALL return a message indicating that information is not available.
 **Validates: Requirements 2.3**
 
 **Property 7: Context Grounding**
@@ -795,15 +795,15 @@ After analyzing all acceptance criteria, I identified several opportunities to c
 **Validates: Requirements 3.2, 14.3**
 
 **Property 8: Eligibility Criteria Inclusion**
-*For any* context containing eligibility criteria, the generated response SHALL include those criteria in a clearly formatted list.
+*For any* context containing eligibility criteria, I SHALL include those criteria in a clearly formatted list in my generated response.
 **Validates: Requirements 3.1, 3.3**
 
 **Property 9: Action Steps Formatting**
-*For any* context containing application steps, the generated response SHALL present them as numbered action steps.
+*For any* context containing application steps, I SHALL present them as numbered action steps in my generated response.
 **Validates: Requirements 3.4**
 
 **Property 10: TTS Language Matching**
-*For any* text response in a supported language, the TTS_Service SHALL generate audio in that same language.
+*For any* text response in a supported language, I SHALL generate audio in that same language.
 **Validates: Requirements 5.1**
 
 **Property 11: Audio Output Format**
@@ -811,91 +811,91 @@ After analyzing all acceptance criteria, I identified several opportunities to c
 **Validates: Requirements 5.5**
 
 **Property 12: OCR Text Extraction**
-*For any* valid document image, the OCR_Service SHALL extract text content from the image.
+*For any* valid document image, I SHALL extract text content from the image.
 **Validates: Requirements 6.1**
 
 **Property 13: Document Language Detection**
-*For any* extracted text from a document, the Snap_Explain_Module SHALL detect the language of the text.
+*For any* extracted text from a document, I SHALL detect the language of the text.
 **Validates: Requirements 6.2**
 
 **Property 14: Document Translation**
-*For any* document in a detected language, the Snap_Explain_Module SHALL translate it to the user's preferred language.
+*For any* document in a detected language, I SHALL translate it to the user's preferred language.
 **Validates: Requirements 6.3**
 
 **Property 15: Document Summarization**
-*For any* processed document, the Snap_Explain_Module SHALL generate a simplified summary.
+*For any* processed document, I SHALL generate a simplified summary.
 **Validates: Requirements 6.4**
 
 **Property 16: Action Steps Extraction**
-*For any* document containing application instructions, the Snap_Explain_Module SHALL extract and format them as action steps.
+*For any* document containing application instructions, I SHALL extract and format them as action steps.
 **Validates: Requirements 6.5**
 
 **Property 17: Document Chunking Size**
-*For any* document added to the knowledge base, all generated chunks SHALL be between 500 and 1000 tokens in size.
+*For any* document added to my knowledge base, all generated chunks SHALL be between 500 and 1000 tokens in size.
 **Validates: Requirements 7.2**
 
 **Property 18: Embedding Generation**
-*For any* document chunk, the system SHALL generate a vector embedding.
+*For any* document chunk, I SHALL generate a vector embedding.
 **Validates: Requirements 7.3**
 
 **Property 19: Metadata Storage**
-*For any* stored embedding, the vector database entry SHALL include metadata fields: document_name, scheme_name, source_url, and last_updated.
+*For any* stored embedding, my vector database entry SHALL include metadata fields: document_name, scheme_name, source_url, and last_updated.
 **Validates: Requirements 7.4**
 
 ### Performance Properties
 
 **Property 20: ASR Latency**
-*For any* audio input, the ASR_Service SHALL complete speech-to-text conversion within 3 seconds.
+*For any* audio input, I SHALL complete speech-to-text conversion within 3 seconds.
 **Validates: Requirements 1.1, 8.2**
 
 **Property 21: Vector Search Latency**
-*For any* query embedding, the vector database search SHALL complete within 1 second.
+*For any* query embedding, my vector database search SHALL complete within 1 second.
 **Validates: Requirements 8.3**
 
 **Property 22: LLM Response Latency**
-*For any* query with retrieved context, the LLM_Engine SHALL generate a response within 2 seconds.
+*For any* query with retrieved context, I SHALL generate a response within 2 seconds.
 **Validates: Requirements 8.4**
 
 **Property 23: End-to-End Voice Latency**
-*For any* voice query, the complete voice-to-voice response SHALL be delivered within 5 seconds.
+*For any* voice query, I SHALL deliver the complete voice-to-voice response within 5 seconds.
 **Validates: Requirements 5.4, 8.1**
 
 **Property 24: Image Processing Latency**
-*For any* uploaded document image, the Snap_Explain_Module SHALL provide a summary within 8 seconds.
+*For any* uploaded document image, I SHALL provide a summary within 8 seconds.
 **Validates: Requirements 8.5**
 
 ### Interface and Accessibility Properties
 
 **Property 25: Multi-Input Support**
-*For any* web interface session, the system SHALL accept both voice input and text input.
+*For any* web interface session, I SHALL accept both voice input and text input.
 **Validates: Requirements 9.4**
 
 ### Optimization Properties
 
 **Property 26: Audio Compression Under Low Bandwidth**
-*For any* network condition with bandwidth below 100 kbps, the system SHALL compress audio to maintain functionality.
+*For any* network condition with bandwidth below 100 kbps, I SHALL compress audio to maintain functionality.
 **Validates: Requirements 10.1**
 
 **Property 27: Efficient Audio Codec Usage**
-*For any* voice data transmission, the system SHALL use efficient audio codecs to minimize data transfer.
+*For any* voice data transmission, I SHALL use efficient audio codecs to minimize data transfer.
 **Validates: Requirements 10.2**
 
 **Property 28: Latency Indicator Display**
-*For any* request where network latency exceeds 2 seconds, the system SHALL display a waiting indicator.
+*For any* request where network latency exceeds 2 seconds, I SHALL display a waiting indicator.
 **Validates: Requirements 10.3**
 
 **Property 29: Query Caching**
-*For any* query that has been processed before, the system SHALL serve the response from cache on subsequent identical queries.
+*For any* query that has been processed before, I SHALL serve the response from cache on subsequent identical queries.
 **Validates: Requirements 10.4**
 
 **Property 30: Request Queuing**
-*For any* request made during intermittent connectivity, the system SHALL queue the request and process it when connection is restored.
+*For any* request made during intermittent connectivity, I SHALL queue the request and process it when connection is restored.
 **Validates: Requirements 10.5**
 
 ### Security and Privacy Properties
 
 **Property 31: Audio Non-Persistence**
-*For any* processed voice input, the audio recording SHALL be deleted after transcription is complete.
+*For any* processed voice input, I SHALL delete the audio recording after transcription is complete.
 **Validates: Requirements 11.1**
 
 **Property 32: Encrypted API Communication**
@@ -903,57 +903,57 @@ After analyzing all acceptance criteria, I identified several opportunities to c
 **Validates: Requirements 11.2**
 
 **Property 33: Log Anonymization**
-*For any* logged interaction, user identifiers SHALL be anonymized or hashed.
+*For any* logged interaction, I SHALL anonymize or hash user identifiers.
 **Validates: Requirements 11.3**
 
 **Property 34: Temporary Data Cleanup**
-*For any* session that has ended, all temporary audio and text data SHALL be deleted within 1 hour.
+*For any* session that has ended, I SHALL delete all temporary audio and text data within 1 hour.
 **Validates: Requirements 11.5**
 
 ### Error Handling Properties
 
 **Property 35: ASR Failure Handling**
-*For any* ASR processing failure, the system SHALL return an error message in the user's local language requesting retry.
+*For any* ASR processing failure, I SHALL return an error message in the user's local language requesting retry.
 **Validates: Requirements 12.1**
 
 **Property 36: Database Unavailability Handling**
-*For any* vector database unavailability, the system SHALL return a message indicating temporary service unavailability.
+*For any* vector database unavailability, I SHALL return a message indicating temporary service unavailability.
 **Validates: Requirements 12.2**
 
 **Property 37: LLM Failure Fallback**
-*For any* LLM generation failure, the system SHALL provide a fallback message with contact information.
+*For any* LLM generation failure, I SHALL provide a fallback message with contact information.
 **Validates: Requirements 12.3**
 
 **Property 38: TTS Failure Fallback**
-*For any* TTS service failure, the system SHALL display the response as text instead of audio.
+*For any* TTS service failure, I SHALL display the response as text instead of audio.
 **Validates: Requirements 12.4**
 
 **Property 39: Error Logging Completeness**
-*For any* component failure, the system SHALL log the error with timestamp, component name, error type, and error message.
+*For any* component failure, I SHALL log the error with timestamp, component name, error type, and error message.
 **Validates: Requirements 12.5**
 
 ### Extensibility Properties
 
 **Property 40: Language Configuration Extensibility**
-*For any* new language added through configuration, the system SHALL support queries and responses in that language.
+*For any* new language added through configuration, I SHALL support queries and responses in that language.
 **Validates: Requirements 13.5**
 
 ### Content Accuracy Properties
 
 **Property 41: Source Attribution**
-*For any* response providing scheme information, the response SHALL include the source document name.
+*For any* response providing scheme information, I SHALL include the source document name.
 **Validates: Requirements 14.1**
 
 **Property 42: Eligibility Citation**
-*For any* response stating eligibility criteria, the response SHALL cite the official scheme guidelines.
+*For any* response stating eligibility criteria, I SHALL cite the official scheme guidelines.
 **Validates: Requirements 14.2**
 
 **Property 43: Uncertainty Disclosure**
-*For any* response with low confidence (similarity score < 0.8), the response SHALL include a disclaimer to verify with official sources.
+*For any* response with low confidence (similarity score < 0.8), I SHALL include a disclaimer to verify with official sources.
 **Validates: Requirements 14.4**
 
 **Property 44: Document Metadata Completeness**
-*For any* document in the knowledge base, the metadata SHALL include a last_updated date field.
+*For any* document in my knowledge base, the metadata SHALL include a last_updated date field.
 **Validates: Requirements 14.5**
 
 ### Round-Trip Properties
@@ -965,4 +965,3 @@ After analyzing all acceptance criteria, I identified several opportunities to c
 **Property 46: Embedding-Search Round-Trip**
 *For any* document chunk, generating its embedding, storing it, and searching with the same embedding SHALL return that chunk as the top result.
 **Validates: Requirements 2.1, 7.3, 7.4**
-

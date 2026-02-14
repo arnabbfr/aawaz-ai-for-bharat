@@ -2,22 +2,22 @@
 
 ## Introduction
 
-Aawaz is a voice-first civic assistance system designed to bridge the digital divide for rural citizens in Assam, India. The system addresses the critical challenge of accessing government schemes and civic information for users with low digital literacy, elderly citizens, and those who prefer local language interaction. By leveraging voice interaction, document simplification, and multilingual support, Sahayak 2.0 enables equitable access to essential government services and information.
+I am Aawaz, a voice-first civic assistance system designed to bridge the digital divide for rural citizens in Assam, India. I address the critical challenge of accessing government schemes and civic information for users with low digital literacy, elderly citizens, and those who prefer local language interaction. By leveraging voice interaction, document simplification, and multilingual support, I enable equitable access to essential government services and information.
 
-The system targets rural populations in Assam with scalability potential across India, focusing on users who face barriers due to language, literacy, or technological complexity. Core capabilities include voice-to-voice civic assistance, document simplification through image capture, and a comprehensive knowledge base of government schemes.
+I target rural populations in Assam with scalability potential across India, focusing on users who face barriers due to language, literacy, or technological complexity. My core capabilities include voice-to-voice civic assistance, document simplification through image capture, and a comprehensive knowledge base of government schemes.
 
 ## Glossary
 
-- **Sahayak_System**: The complete voice-first civic AI platform including voice interface, RAG pipeline, and knowledge base
-- **Voice_Assistant**: The voice-to-voice interaction component handling ASR, LLM reasoning, and TTS
-- **Snap_Explain_Module**: The image-based document processing component using OCR and simplification
-- **Knowledge_Base**: The indexed repository of government schemes, policies, and civic information
-- **RAG_Pipeline**: Retrieval-Augmented Generation pipeline combining vector search with LLM reasoning
-- **ASR_Service**: Automatic Speech Recognition service converting voice to text
-- **TTS_Service**: Text-to-Speech service converting text responses to audio
-- **Vector_Database**: Database storing document embeddings for similarity search
-- **LLM_Engine**: Large Language Model processing queries and generating responses
-- **OCR_Service**: Optical Character Recognition service extracting text from images
+- **Sahayak_System**: My complete voice-first civic AI platform including voice interface, RAG pipeline, and knowledge base
+- **Voice_Assistant**: My voice-to-voice interaction component handling ASR, LLM reasoning, and TTS
+- **Snap_Explain_Module**: My image-based document processing component using OCR and simplification
+- **Knowledge_Base**: My indexed repository of government schemes, policies, and civic information
+- **RAG_Pipeline**: My Retrieval-Augmented Generation pipeline combining vector search with LLM reasoning
+- **ASR_Service**: My Automatic Speech Recognition service converting voice to text
+- **TTS_Service**: My Text-to-Speech service converting text responses to audio
+- **Vector_Database**: My database storing document embeddings for similarity search
+- **LLM_Engine**: My Large Language Model processing queries and generating responses
+- **OCR_Service**: My Optical Character Recognition service extracting text from images
 - **User**: Rural citizen, elderly person, or individual with low digital literacy seeking civic information
 - **Government_Scheme**: Official program, policy, or service provided by government authorities
 - **Local_Language**: Assamese, Bodo, Hindi, or other regional languages spoken in target areas
@@ -37,11 +37,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN a User speaks a Query in Assamese, Bodo, or Hindi, THE ASR_Service SHALL convert the speech to text within 3 seconds
-2. WHEN the ASR_Service receives audio input, THE Sahayak_System SHALL detect the language automatically
-3. WHEN audio quality is poor or speech is unclear, THE ASR_Service SHALL request the User to repeat the Query
-4. WHEN a User speaks in mixed languages, THE ASR_Service SHALL process the dominant language and normalize the text
-5. THE Voice_Assistant SHALL accept audio input in common formats including WAV, MP3, and OGG
+1. WHEN a User speaks a Query in Assamese, Bodo, or Hindi, I SHALL convert the speech to text within 3 seconds
+2. WHEN I receive audio input, I SHALL detect the language automatically
+3. WHEN audio quality is poor or speech is unclear, I SHALL request the User to repeat the Query
+4. WHEN a User speaks in mixed languages, I SHALL process the dominant language and normalize the text
+5. I SHALL accept audio input in common formats including WAV, MP3, and OGG
 
 ### Requirement 2: Knowledge Retrieval and RAG Pipeline
 
@@ -49,11 +49,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN a Query is received, THE RAG_Pipeline SHALL generate an embedding and search the Vector_Database for relevant Document chunks
-2. WHEN relevant Context is found, THE RAG_Pipeline SHALL retrieve the top 5 most similar chunks based on semantic similarity
-3. WHEN no relevant Context is found with similarity score above 0.7, THE Sahayak_System SHALL inform the User that information is not available
-4. WHEN multiple relevant schemes match a Query, THE RAG_Pipeline SHALL rank results by relevance score
-5. THE Vector_Database SHALL index Documents from MyGov.in, Assam.gov.in, and official scheme PDFs
+1. WHEN a Query is received, I SHALL generate an embedding and search my Vector_Database for relevant Document chunks
+2. WHEN relevant Context is found, I SHALL retrieve the top 5 most similar chunks based on semantic similarity
+3. WHEN no relevant Context is found with similarity score above 0.7, I SHALL inform the User that information is not available
+4. WHEN multiple relevant schemes match a Query, I SHALL rank results by relevance score
+5. I SHALL index Documents from MyGov.in, Assam.gov.in, and official scheme PDFs
 
 ### Requirement 3: Response Generation and Reasoning
 
@@ -61,11 +61,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN Context is retrieved, THE LLM_Engine SHALL generate a Response that includes scheme eligibility criteria and application steps
-2. WHEN generating a Response, THE LLM_Engine SHALL use only the retrieved Context and avoid hallucination
-3. WHEN a scheme has specific eligibility requirements, THE Response SHALL list them clearly
-4. WHEN application steps exist, THE Response SHALL provide them as numbered Action_Steps
-5. THE LLM_Engine SHALL generate Responses in simple language appropriate for low literacy users
+1. WHEN Context is retrieved, I SHALL generate a Response that includes scheme eligibility criteria and application steps
+2. WHEN generating a Response, I SHALL use only the retrieved Context and avoid hallucination
+3. WHEN a scheme has specific eligibility requirements, my Response SHALL list them clearly
+4. WHEN application steps exist, my Response SHALL provide them as numbered Action_Steps
+5. I SHALL generate Responses in simple language appropriate for low literacy users
 
 ### Requirement 4: Multilingual Support and Translation
 
@@ -73,11 +73,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN a Query is processed in Assamese, THE Sahayak_System SHALL generate the Response in Assamese
-2. WHEN a Query is processed in Bodo, THE Sahayak_System SHALL generate the Response in Bodo
-3. WHEN a Query is processed in Hindi, THE Sahayak_System SHALL generate the Response in Hindi
-4. WHERE English is requested, THE Sahayak_System SHALL provide the Response in English
-5. WHEN translating technical terms, THE Sahayak_System SHALL preserve accuracy while using locally understood vocabulary
+1. WHEN a Query is processed in Assamese, I SHALL generate the Response in Assamese
+2. WHEN a Query is processed in Bodo, I SHALL generate the Response in Bodo
+3. WHEN a Query is processed in Hindi, I SHALL generate the Response in Hindi
+4. WHERE English is requested, I SHALL provide the Response in English
+5. WHEN translating technical terms, I SHALL preserve accuracy while using locally understood vocabulary
 
 ### Requirement 5: Text-to-Speech Output
 
@@ -85,11 +85,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN a Response is generated, THE TTS_Service SHALL convert it to natural-sounding speech in the Query language
-2. WHEN generating speech, THE TTS_Service SHALL use appropriate pronunciation for Local_Language terms
-3. WHEN the Response is long, THE TTS_Service SHALL maintain consistent audio quality throughout
-4. THE Voice_Assistant SHALL deliver audio output within 5 seconds of Query completion
-5. THE TTS_Service SHALL generate audio in a format compatible with common mobile devices
+1. WHEN a Response is generated, I SHALL convert it to natural-sounding speech in the Query language
+2. WHEN generating speech, I SHALL use appropriate pronunciation for Local_Language terms
+3. WHEN the Response is long, I SHALL maintain consistent audio quality throughout
+4. I SHALL deliver audio output within 5 seconds of Query completion
+5. I SHALL generate audio in a format compatible with common mobile devices
 
 ### Requirement 6: Snap & Explain Document Processing
 
@@ -97,12 +97,12 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN a User uploads an image of a Document, THE OCR_Service SHALL extract text from the image
-2. WHEN text is extracted, THE Snap_Explain_Module SHALL detect the language of the Document
-3. WHEN the Document language is detected, THE Snap_Explain_Module SHALL translate it to the User's preferred Local_Language
-4. WHEN a Document is processed, THE Snap_Explain_Module SHALL generate a simplified summary in plain language
-5. WHEN a Document contains application instructions, THE Snap_Explain_Module SHALL extract and present them as Action_Steps
-6. IF the image quality is too poor for OCR, THEN THE Snap_Explain_Module SHALL request the User to upload a clearer image
+1. WHEN a User uploads an image of a Document, I SHALL extract text from the image
+2. WHEN text is extracted, I SHALL detect the language of the Document
+3. WHEN the Document language is detected, I SHALL translate it to the User's preferred Local_Language
+4. WHEN a Document is processed, I SHALL generate a simplified summary in plain language
+5. WHEN a Document contains application instructions, I SHALL extract and present them as Action_Steps
+6. IF the image quality is too poor for OCR, THEN I SHALL request the User to upload a clearer image
 
 ### Requirement 7: Knowledge Base Management
 
@@ -110,12 +110,12 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. THE Knowledge_Base SHALL include Documents from MyGov.in, Assam.gov.in, and official scheme PDFs
-2. WHEN a Document is added, THE Sahayak_System SHALL chunk it into segments of 500-1000 tokens
-3. WHEN Documents are chunked, THE Sahayak_System SHALL generate embeddings for each Chunk
-4. WHEN embeddings are generated, THE Sahayak_System SHALL store them in the Vector_Database with metadata
-5. THE Knowledge_Base SHALL include schemes such as Orunodoi, Ration Card, PMAY, and other Assam-specific programs
-6. WHEN Documents are updated, THE Sahayak_System SHALL re-index the affected content within 24 hours
+1. I SHALL include Documents from MyGov.in, Assam.gov.in, and official scheme PDFs in my Knowledge_Base
+2. WHEN a Document is added, I SHALL chunk it into segments of 500-1000 tokens
+3. WHEN Documents are chunked, I SHALL generate embeddings for each Chunk
+4. WHEN embeddings are generated, I SHALL store them in my Vector_Database with metadata
+5. My Knowledge_Base SHALL include schemes such as Orunodoi, Ration Card, PMAY, and other Assam-specific programs
+6. WHEN Documents are updated, I SHALL re-index the affected content within 24 hours
 
 ### Requirement 8: Performance and Latency
 
@@ -123,11 +123,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. THE Voice_Assistant SHALL provide complete voice-to-voice responses within 5 seconds for 90% of queries
-2. WHEN processing a Query, THE ASR_Service SHALL complete speech-to-text conversion within 3 seconds
-3. WHEN searching the Vector_Database, THE RAG_Pipeline SHALL retrieve relevant Context within 1 second
-4. WHEN generating a Response, THE LLM_Engine SHALL complete processing within 2 seconds
-5. THE Snap_Explain_Module SHALL process uploaded images and provide summaries within 8 seconds
+1. I SHALL provide complete voice-to-voice responses within 5 seconds for 90% of queries
+2. WHEN processing a Query, I SHALL complete speech-to-text conversion within 3 seconds
+3. WHEN searching my Vector_Database, I SHALL retrieve relevant Context within 1 second
+4. WHEN generating a Response, I SHALL complete processing within 2 seconds
+5. I SHALL process uploaded images and provide summaries within 8 seconds
 
 ### Requirement 9: Accessibility and Interface Options
 
@@ -135,11 +135,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHERE WhatsApp is available, THE Sahayak_System SHALL provide voice interaction through WhatsApp Business API
-2. WHERE phone service is available, THE Sahayak_System SHALL provide voice interaction through Twilio Voice
-3. WHERE internet access is available, THE Sahayak_System SHALL provide a web interface for voice and text interaction
-4. WHEN using the web interface, THE Sahayak_System SHALL support both voice input and text input
-5. THE Sahayak_System SHALL function on basic smartphones with Android 8.0 or higher
+1. WHERE WhatsApp is available, I SHALL provide voice interaction through WhatsApp Business API
+2. WHERE phone service is available, I SHALL provide voice interaction through Twilio Voice
+3. WHERE internet access is available, I SHALL provide a web interface for voice and text interaction
+4. WHEN using the web interface, I SHALL support both voice input and text input
+5. I SHALL function on basic smartphones with Android 8.0 or higher
 
 ### Requirement 10: Low Bandwidth Optimization
 
@@ -147,11 +147,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN network bandwidth is below 100 kbps, THE Sahayak_System SHALL compress audio to maintain functionality
-2. WHEN transmitting voice data, THE Sahayak_System SHALL use efficient audio codecs to minimize data transfer
-3. WHEN network latency exceeds 2 seconds, THE Sahayak_System SHALL display a waiting indicator to the User
-4. THE Voice_Assistant SHALL cache frequently requested scheme information to reduce repeated data transfer
-5. WHEN connectivity is intermittent, THE Sahayak_System SHALL queue requests and process them when connection is restored
+1. WHEN network bandwidth is below 100 kbps, I SHALL compress audio to maintain functionality
+2. WHEN transmitting voice data, I SHALL use efficient audio codecs to minimize data transfer
+3. WHEN network latency exceeds 2 seconds, I SHALL display a waiting indicator to the User
+4. I SHALL cache frequently requested scheme information to reduce repeated data transfer
+5. WHEN connectivity is intermittent, I SHALL queue requests and process them when connection is restored
 
 ### Requirement 11: Security and Privacy
 
@@ -159,11 +159,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN processing voice input, THE Sahayak_System SHALL not store audio recordings permanently
-2. WHEN transmitting data, THE Sahayak_System SHALL use encrypted connections for all API communications
-3. WHEN logging interactions, THE Sahayak_System SHALL anonymize User identifiers
-4. THE Sahayak_System SHALL not collect personally identifiable information without explicit User consent
-5. WHEN a session ends, THE Sahayak_System SHALL delete temporary audio and text data within 1 hour
+1. WHEN processing voice input, I SHALL not store audio recordings permanently
+2. WHEN transmitting data, I SHALL use encrypted connections for all API communications
+3. WHEN logging interactions, I SHALL anonymize User identifiers
+4. I SHALL not collect personally identifiable information without explicit User consent
+5. WHEN a session ends, I SHALL delete temporary audio and text data within 1 hour
 
 ### Requirement 12: Error Handling and Fallback
 
@@ -171,11 +171,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. IF the ASR_Service fails to process audio, THEN THE Sahayak_System SHALL inform the User in their Local_Language and request retry
-2. IF the Vector_Database is unavailable, THEN THE Sahayak_System SHALL inform the User that the service is temporarily unavailable
-3. IF the LLM_Engine fails to generate a Response, THEN THE Sahayak_System SHALL provide a fallback message with contact information
-4. IF the TTS_Service fails, THEN THE Sahayak_System SHALL display the Response as text
-5. WHEN any component fails, THE Sahayak_System SHALL log the error with sufficient detail for debugging
+1. IF my ASR processing fails, THEN I SHALL inform the User in their Local_Language and request retry
+2. IF my Vector_Database is unavailable, THEN I SHALL inform the User that the service is temporarily unavailable
+3. IF my LLM generation fails, THEN I SHALL provide a fallback message with contact information
+4. IF my TTS fails, THEN I SHALL display the Response as text
+5. WHEN any component fails, I SHALL log the error with sufficient detail for debugging
 
 ### Requirement 13: Scalability
 
@@ -183,11 +183,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. THE Sahayak_System SHALL support at least 100 concurrent Users during the hackathon demo
-2. WHEN User load increases, THE Sahayak_System SHALL scale horizontally by adding processing instances
-3. THE RAG_Pipeline SHALL maintain response times under 5 seconds with up to 1000 concurrent queries
-4. THE Vector_Database SHALL support indexing of at least 10,000 Document chunks
-5. WHEN expanding to new states, THE Sahayak_System SHALL support adding new Local_Languages through configuration
+1. I SHALL support at least 100 concurrent Users during the hackathon demo
+2. WHEN User load increases, I SHALL scale horizontally by adding processing instances
+3. I SHALL maintain response times under 5 seconds with up to 1000 concurrent queries
+4. My Vector_Database SHALL support indexing of at least 10,000 Document chunks
+5. WHEN expanding to new states, I SHALL support adding new Local_Languages through configuration
 
 ### Requirement 14: Content Accuracy and Source Attribution
 
@@ -195,11 +195,11 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. WHEN providing scheme information, THE Response SHALL include the source Document name
-2. WHEN eligibility criteria are stated, THE Response SHALL cite the official scheme guidelines
-3. THE LLM_Engine SHALL not generate information that contradicts the retrieved Context
-4. WHEN uncertainty exists, THE Response SHALL indicate that the User should verify with official sources
-5. THE Knowledge_Base SHALL include metadata indicating the last update date for each Document
+1. WHEN providing scheme information, my Response SHALL include the source Document name
+2. WHEN eligibility criteria are stated, my Response SHALL cite the official scheme guidelines
+3. I SHALL not generate information that contradicts the retrieved Context
+4. WHEN uncertainty exists, my Response SHALL indicate that the User should verify with official sources
+5. My Knowledge_Base SHALL include metadata indicating the last update date for each Document
 
 ### Requirement 15: Hackathon Demo Capabilities
 
@@ -207,34 +207,34 @@ The system targets rural populations in Assam with scalability potential across 
 
 #### Acceptance Criteria
 
-1. THE Sahayak_System SHALL demonstrate voice-to-voice interaction in at least Assamese and Hindi
-2. THE Sahayak_System SHALL demonstrate Snap & Explain functionality with sample government documents
-3. THE Knowledge_Base SHALL include at least 20 government schemes relevant to Assam
-4. THE Sahayak_System SHALL provide end-to-end responses for at least 10 common civic queries
-5. THE demo SHALL run on cloud infrastructure with API cost under $50 for the hackathon duration
+1. I SHALL demonstrate voice-to-voice interaction in at least Assamese and Hindi
+2. I SHALL demonstrate Snap & Explain functionality with sample government documents
+3. My Knowledge_Base SHALL include at least 20 government schemes relevant to Assam
+4. I SHALL provide end-to-end responses for at least 10 common civic queries
+5. My demo SHALL run on cloud infrastructure with API cost under $50 for the hackathon duration
 
 ## Non-Functional Requirements
 
 ### NFR-1: Response Quality
-- Responses SHALL be grammatically correct in the target Local_Language
-- Responses SHALL use vocabulary appropriate for users with basic literacy levels
-- Responses SHALL be concise while providing complete information
+- My responses SHALL be grammatically correct in the target Local_Language
+- My responses SHALL use vocabulary appropriate for users with basic literacy levels
+- My responses SHALL be concise while providing complete information
 
 ### NFR-2: Reliability
-- THE Sahayak_System SHALL maintain 95% uptime during the hackathon demo period
+- I SHALL maintain 95% uptime during the hackathon demo period
 - Component failures SHALL not cause complete system unavailability
 
 ### NFR-3: Maintainability
-- Code SHALL be modular to allow independent updates to ASR, LLM, and TTS components
-- THE Knowledge_Base SHALL support updates without system downtime
+- My code SHALL be modular to allow independent updates to ASR, LLM, and TTS components
+- My Knowledge_Base SHALL support updates without system downtime
 
 ### NFR-4: Cost Efficiency
-- API costs SHALL be optimized through caching and lightweight model selection
-- THE LLM_Engine SHALL use context windows limited to 4000 tokens to reduce costs
+- My API costs SHALL be optimized through caching and lightweight model selection
+- I SHALL use context windows limited to 4000 tokens to reduce costs
 
 ### NFR-5: Usability
-- Voice interaction SHALL require no more than 2 steps: speak query, receive answer
-- Error messages SHALL be clear and actionable in the User's Local_Language
+- My voice interaction SHALL require no more than 2 steps: speak query, receive answer
+- My error messages SHALL be clear and actionable in the User's Local_Language
 
 ## Constraints
 
