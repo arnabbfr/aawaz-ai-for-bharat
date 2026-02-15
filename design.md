@@ -1,8 +1,8 @@
-# Design Document: Sahayak 2.0 – Voice-First Civic AI for Rural India
+# Design Document: Aawaz 2.0 – Voice-First Civic AI for Rural India
 
 ## Overview
 
-I am Sahayak 2.0, a voice-first civic assistance platform that combines Automatic Speech Recognition (ASR), Retrieval-Augmented Generation (RAG), and Text-to-Speech (TTS) to provide accessible government scheme information to rural citizens in Assam, India. My architecture follows a modular pipeline design where user voice input flows through language processing, semantic search, LLM reasoning, and voice output generation.
+I am Aawaz 2.0, a voice-first civic assistance platform that combines Automatic Speech Recognition (ASR), Retrieval-Augmented Generation (RAG), and Text-to-Speech (TTS) to provide accessible government scheme information to rural citizens in Assam, India. My architecture follows a modular pipeline design where user voice input flows through language processing, semantic search, LLM reasoning, and voice output generation.
 
 My core innovation lies in the RAG pipeline that grounds LLM responses in verified government documents, preventing hallucination while enabling natural language interaction in local languages. I support two primary interaction modes: voice-to-voice conversation for queries and image-based document simplification (Snap & Explain) for physical documents.
 
@@ -186,7 +186,7 @@ Output:
 
 **Prompt Template**:
 ```
-I am Sahayak, a helpful civic assistant for rural India. I answer user questions based ONLY on the provided context. If the context doesn't contain the answer, I say so clearly.
+I am Aawaz, a helpful civic assistant for rural India. I answer user questions based ONLY on the provided context. If the context doesn't contain the answer, I say so clearly.
 
 Context:
 {retrieved_context}
@@ -568,7 +568,7 @@ Output in {language} using simple vocabulary.
 
 ## Testing Strategy
 
-The testing strategy for Sahayak 2.0 combines unit testing for specific examples and edge cases with property-based testing for universal correctness properties. This dual approach ensures both concrete functionality and general correctness across diverse inputs.
+The testing strategy for Aawaz 2.0 combines unit testing for specific examples and edge cases with property-based testing for universal correctness properties. This dual approach ensures both concrete functionality and general correctness across diverse inputs.
 
 ### Dual Testing Approach
 
@@ -595,14 +595,14 @@ The testing strategy for Sahayak 2.0 combines unit testing for specific examples
 **Test Configuration**:
 - **Minimum 100 iterations** per property test (due to randomization)
 - Each property test MUST reference its design document property
-- Tag format: `# Feature: sahayak-civic-ai, Property {number}: {property_text}`
+- Tag format: `# Feature: Aawaz-civic-ai, Property {number}: {property_text}`
 
 **Example Property Test Structure** (Python with Hypothesis):
 ```python
 from hypothesis import given, strategies as st
 import pytest
 
-# Feature: sahayak-civic-ai, Property 1: Language Consistency
+# Feature: Aawaz-civic-ai, Property 1: Language Consistency
 @given(
     query_text=st.text(min_size=10, max_size=200),
     language=st.sampled_from(['as', 'brx', 'hi', 'en'])  # Assamese, Bodo, Hindi, English
@@ -618,7 +618,7 @@ def test_language_consistency(query_text, language):
 ```javascript
 import fc from 'fast-check';
 
-// Feature: sahayak-civic-ai, Property 17: Document Chunking Size
+// Feature: Aawaz-civic-ai, Property 17: Document Chunking Size
 test('Property 17: All chunks are between 500-1000 tokens', () => {
   fc.assert(
     fc.property(

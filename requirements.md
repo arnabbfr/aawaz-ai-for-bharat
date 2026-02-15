@@ -8,7 +8,7 @@ I target rural populations in Assam with scalability potential across India, foc
 
 ## Glossary
 
-- **Sahayak_System**: My complete voice-first civic AI platform including voice interface, RAG pipeline, and knowledge base
+- **Aawaz_System**: My complete voice-first civic AI platform including voice interface, RAG pipeline, and knowledge base
 - **Voice_Assistant**: My voice-to-voice interaction component handling ASR, LLM reasoning, and TTS
 - **Snap_Explain_Module**: My image-based document processing component using OCR and simplification
 - **Knowledge_Base**: My indexed repository of government schemes, policies, and civic information
